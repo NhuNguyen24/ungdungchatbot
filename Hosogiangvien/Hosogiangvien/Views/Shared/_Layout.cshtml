@@ -1,0 +1,84 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <link href="~/Theme/css/components.css" rel="stylesheet" />
+
+    <link href="~/Theme/css/responsee.css" rel="stylesheet" />
+    <link href="~/Theme/css/template-style.css" rel="stylesheet" />
+    <!--Start of Fchat.vn-->
+    <!--Start of Fchat.vn-->
+    <script type="text/javascript" src="https://cdn.fchat.vn/assets/embed/webchat.js?id=6268c7da6e16e026ca127513" async="async"></script>
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li style="font-size: 10px;"> @Html.ActionLink("Thông Tin Giảng Viên", "About", "Home") </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="font-size: 10px;">TKB Giảng Viên<b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li style="font-size: 10px;"> @Html.ActionLink("Chuyên Ngành ", "Contact", "Home") </li>
+                            <li style="font-size: 10px;">@Html.ActionLink("Bổ Túc", "Contact", "Home")</li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="font-size: 10px;">Giảng Viên Chuyên Ngành Đào Tạo<b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li style="font-size: 10px;"> @Html.ActionLink("Khoa ", "Contact", "Home") </li>
+                            <li style="font-size: 10px;">@Html.ActionLink("Khoá", "Contact", "Home")</li>
+                        </ul>
+                    </li>
+                    <li style="font-size: 10px;"> @Html.ActionLink("Đăng Ký Tín Chỉ", "Index", "Home") </li>
+                    <li class="dropdown">
+                        {
+                        <p>
+                            @Html.TextBox("SearchString") <input type="submit" value="Tìm kiếm" />
+                        </p>
+                        }
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer id="underfooter" >
+            <div class="container" >
+                <div class="row" >
+                    <div class="col-md-6 widget" >
+                        <div class="widget-body" >
+                            <p style="font-size: 15px;">SĐT 0332496xxx</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 widget" >
+                        <div class="widget-body">
+                            <p  style="font-size: 15px;">Emai: xyz.qnu.edu.vn</p>
+                        </div>
+                    </div>
+                 
+
+                </div> <!-- /row of widgets -->
+            </div>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
